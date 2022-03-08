@@ -17,8 +17,8 @@ export class UsersService {
       data: {
         email: data.email,
         name: data.name,
+        role: data.role,
         hash,
-        salt,
       },
     });
   }

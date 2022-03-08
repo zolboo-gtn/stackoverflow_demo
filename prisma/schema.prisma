@@ -14,8 +14,8 @@ model User {
   id        Int        @id @default(autoincrement())
   email     String     @unique
   name      String?
+  role      Role
   hash      String
-  salt      String
   comments  Comment[]
   questions Question[]
 }
@@ -51,4 +51,9 @@ model TagsOnQuestions {
   tagId      Int
 
   @@id([questionId, tagId])
+}
+
+enum Role {
+  ADMIN
+  ROLE
 }
